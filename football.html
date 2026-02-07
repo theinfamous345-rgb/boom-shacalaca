@@ -1,1 +1,32 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Advanced Football Game</title>\n    <style>\n        body { font-family: Arial, sans-serif; }\n        #game { width: 100%; height: 600px; border: 1px solid #000; position: relative; }\n    </style>\n</head>\n<body>\n    <h1>Advanced Football Game</h1>\n    <div id="game"></div>\n    <script>\n        // Player setup\n        const players = [];\n        const formations = [\n            { name: '4-4-2', layout: [4, 4] },\n            { name: '4-3-3', layout: [4, 3] }\n        ];\n        const weatherConditions = ['Sunny', 'Rainy', 'Snowy'];\n        let staminaSystem = {};\n        let gameMode = 'Single Player';\n        let statistics = { goals: 0, assists: 0 };\n\n        function initGame() {\n            // Initialize players\n            for (let i = 1; i <= 22; i++) {\n                players.push({ id: i, name: 'Player ' + i, stamina: 100 });\n            }\n            // Start the game\n            startGame();\n        }\n\n        function startGame() {\n            let weather = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];\n            console.log('Weather: ' + weather);\n            // Implement game start logic here\n            console.log('Game started in ' + gameMode + ' mode.');\n            // Sample commentary\n            setInterval(() => {\n                console.log('Commentary: Both teams are playing aggressively!');\n            }, 5000);\n        }\n\n        initGame();\n    </script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Football Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f2f2f2; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; background: white; border-radius: 5px; }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Advanced Football Game!</h1>
+        <p>This game includes the following features:</p>
+        <ul>
+            <li>Stamina System</li>
+            <li>Sprint Button</li>
+            <li>Tackle System</li>
+            <li>Dynamic Weather</li>
+            <li>Multiple Players</li>
+            <li>Formation System</li>
+            <li>Detailed Statistics</li>
+            <li>Live Commentary</li>
+            <li>Enhanced Physics</li>
+            <li>Match Management Features</li>
+        </ul>
+        <p>Enjoy the game!</p>
+    </div>
+</body>
+</html>
